@@ -1,28 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote  name="mi-thorium"
-           fetch="https://github.com/Mi-Thorium" />
-
-  <remote  name="moto-thorium"
-           fetch="https://github.com/Moto-Thorium" />
+  <remote  name="revived"
+           fetch="https://github.com/Sanders-Revived" />
 
   <default revision="refs/heads/master"
-           remote="mi-thorium"
+           remote="revived"
            sync-c="true"
            sync-j="4" />
 
-  <project path="kernel" name="kernel_msm-4.19" groups="kernel" revision="motothorium/a13/master" >
+  <project path="kernel" name="kernel_msm-4.9" groups="kernel" revision="motothorium/a13/wip/moto" >
     <linkfile src="drivers" dest="drivers" />
   </project>
 
-  <project path="dts/vendor-legacy" name="kernel_devicetree_msm-4.19" groups="dts" revision="dts/master" >
-    <linkfile src="." dest="kernel/arch/arm64/boot/dts/vendor-legacy" />
-  </project>
-  <project path="dts/motorola-msm8937" name="kernel_devicetree_motorola-msm8937" groups="dts" revision="dts/moto8937/4.19/master" remote="moto-thorium" >
-    <linkfile src="." dest="kernel/arch/arm64/boot/dts/motorola-msm8937" />
+  <project path="dts/motorola-sanders" name="kernel_devicetree_motorola-msm8937" groups="dts" revision="dts/sanders/4.9/master" >
+    <linkfile src="." dest="kernel/arch/arm64/boot/dts/motorola-sanders" />
   </project>
 
-  <project path="module/audio-legacy" name="kernel_techpack_audio-legacy" groups="module" revision="audio/4.19/motothorium/master" >
+  <project path="module/audio-legacy" name="kernel_techpack_audio-legacy" groups="module" revision="audio/4.9/mithorium/master" >
     <linkfile src="." dest="kernel/techpack/audio-legacy" />
   </project>
 
